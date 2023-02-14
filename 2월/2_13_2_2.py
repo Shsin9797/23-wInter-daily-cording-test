@@ -28,12 +28,12 @@ for a in range(N):
             l,r = b,a
 
         #
-        if r==l:
+        if r==l: # 두개 같을땐 두 값중 하나만 선택하면됨
+            #if l-1<0: # 첫
+            #    P= nList[r]
             P= sList[r]
-        elif l-1<0:
-            P= sList[r]-sList[0]
         else:
-            P= sList[r] - sList[l-1]
+            P= sList[r] - sList[l] #l-1 하는거아님.. 그냥 l 자리 빼면됌..
 
 
         #최댓값 확인하는 부분
