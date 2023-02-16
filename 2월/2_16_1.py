@@ -12,9 +12,13 @@ for i in S:
             break # false 인거 알게되면 반복문 멈춰야함
         elif gal.pop() =="(":
             continue
-        else:
-            isCor = False
-            break
+        #else:
+        #    isCor = False
+        #    break
+# 다 끝나고 비어있어야 isCor 인거임..
+if gal : # 다 돌고 안비어있으면
+    isCor=False
+    #비어있는경우는 할필요 없음..
 
 if isCor:
     print('YES')
