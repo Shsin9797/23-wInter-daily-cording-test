@@ -6,13 +6,14 @@ T=int(input()) # 테스트 케이스 개수
 #타노스 정렬
 def ta(N,A):
     Sorted =False
+
     while not Sorted:
         Sorted =True
         for i in range(N-1):
             if A[i]>A[i+1]:
                 A[i] //= 2
                 Sorted =False
-
+                break #for 문 멈추고 다시 while 문 처음부터시작
 
 
 #출력문
