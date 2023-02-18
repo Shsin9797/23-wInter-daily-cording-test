@@ -2,19 +2,19 @@
 T= int(input()) #테스트 케이스 개수
 
 
-#이중 for 문을 이용하여
+# 바뀌면 뒤에꺼랑 비교하도록.. 재귀 구현
+
 #타노스 정렬 구현
 def ts(N,A):
-    for i in range(N):
-        for j in range(N):
-            if i>j :
-                a,b =j,i
-            else:
-                a,b= i,j
+    Sorted =False
+    while not Sorted:
+        Sorted =True
+        for i in range(N):
+            if A[i] >A[i+1]:
+                A[i] //= 2
+                Sorted =False
 
-            if A[a] > A[b]:
-                A[a] //=2
-
+        
 
 
 #출력문 구현
