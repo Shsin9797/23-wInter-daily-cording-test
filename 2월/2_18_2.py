@@ -4,16 +4,15 @@
 T=int(input()) # 테스트 케이스 개수
 
 #타노스 정렬
-def ta(A):
-    i=0
-    while True:
-        if i+1 >= len(A): # 같아도 안됨 인덱스는 하나작은거까지 있으므로
-            break
-        elif A[i]>A[i+1]:
-            A[i] //= 2
-            ta(A) #재귀함수 호출로 i=0 부터 다시 체크
-        else:
-            i+=1
+def ta(N,A):
+    Sorted =False
+    while not Sorted:
+        Sorted =True
+        for i in range(N-1):
+            if A[i]>A[i+1]:
+                A[i] //= 2
+                Sorted =False
+
 
 
 #출력문
@@ -30,5 +29,5 @@ for i in range(T):
     A = list(map(int,input().strip().split())) # 수열
 
     #타노스정렬
-    ta(A)
+    ta(N,A)
     printList(A)
